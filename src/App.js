@@ -30,6 +30,9 @@ const router = createBrowserRouter([
         element: <SplitwiseSignupPage/>
       },
       {
+        path: '/prathihas-splitwise/reset-password'
+      },
+      {
         path: '/prathihas-splitwise/logout',
         element: <SplitwiseLogout/>
       },
