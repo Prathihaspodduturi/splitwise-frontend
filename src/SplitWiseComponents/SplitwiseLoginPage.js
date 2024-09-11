@@ -69,6 +69,8 @@ const SplitwiseLoginPage  = () => {
       navigate('/prathihas-splitwise/signup');
     }
 
+    const handleForgotPasswordReDirect = () => {}
+
     if (connectionError) {
       return (
         <div className={styles.errorMessage}>{connectionError}</div>
@@ -103,6 +105,9 @@ const SplitwiseLoginPage  = () => {
                       <button type="submit" className={styles.button}>Log In</button>
                       <div className={styles.prompt}>
                           <p className={styles.para}>Don't have an account? <span className={styles.promptLink} onClick={handleSignUpReDirect}>Sign Up</span></p>
+                      </div>
+                      <div className={styles.prompt}>
+                          <p className={styles.para}>Forgot Password <span className={styles.promptLink} onClick={handleForgotPasswordReDirect}>Click Here</span></p>
                       </div>
                   </form>
               </>
