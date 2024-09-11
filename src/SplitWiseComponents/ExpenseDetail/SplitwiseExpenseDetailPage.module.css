@@ -1,0 +1,222 @@
+/* Common styles for consistency */
+.loader {
+    border: 8px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #000;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spinner 1.2s linear infinite;
+  }
+
+  .loaderContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px; /* Adjust height as needed */
+  }
+
+.participantsContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 20px; /* Add some space at the top */
+}
+
+.participantsSection {
+    width: 45%; /* Ensure both sections take equal space */
+    font-size: 18px; /* Increase font size */
+    padding: 15px; /* Add padding for better spacing */
+    box-sizing: border-box; 
+}
+
+.participantsSection h3 {
+    margin-bottom: 10px; /* Reduce bottom margin on h3 if it's large */
+    font-size: 20px; 
+}
+
+.participantsSection ul {
+    list-style-type: none; /* Remove list bullets */
+    padding: 0; /* Remove default padding */
+}
+
+.participantsSection li, .participantsSection h3 {
+    margin-bottom: 5px; /* Add some space between items */
+    font-size: 18px;
+}
+
+.expenseAmount {
+    font-weight: bold;
+    color: #009688;
+}
+
+.formRow {
+    margin-bottom: 20px;
+}
+
+.warning {
+    color: red;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.editButton, .deleteButton, .restoreButton, .saveButton, .cancelButton{
+    padding: 10px 20px;
+    background-color: #28a745; /* Light green background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex-grow: 0;
+}
+
+.deleteButton{
+    background-color: rgb(240, 36, 36);
+}
+
+.buttonContainer {
+    display: flex;
+    justify-content: start; /* Align buttons to the start of the container */
+    gap: 10px; /* Space between buttons */
+}
+
+
+.button:hover, .editButton:hover {
+    background-color: #218838; /* Slightly darker green on hover */
+}
+
+.deleteButton:hover {
+    background-color: darkred;
+}
+
+.restoreButton {
+    background-color: #28a745;
+}
+
+.restoreButton:hover {
+    background-color: #218838;
+}
+
+.saveButton:hover{
+    background-color: #218838;
+}
+
+.cancelButton {
+    background-color: #6c757d;
+}
+
+.cancelButton:hover {
+    background-color: #5a6268;
+}
+
+.paymentLabel {
+    display: block;
+    margin-bottom: 8px; /* Increased margin for better spacing */
+    font-weight: bold;
+    font-size: 18px; /* Larger font size for better readability */
+}
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.inputForm, .labelForm {
+    font-size: 16px; /* Increase font size */
+}
+
+.inputForm, .paymentInputForm {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+    font-size: 16px; /* Increase font size for inputs */
+}
+
+.labelForm {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.userNameForm
+{
+    font-size: 16px;
+}
+
+/* Media Queries for screens less than 768px wide */
+@media (max-width: 768px) {
+    .participantsContainer, .formContainer {
+        flex-direction: column; /* Stack the sections vertically */
+        align-items: center; /* Center-align the content */
+    }
+
+    .participantsSection, .formContainer {
+        width: 100%; /* Make sections full width */
+        padding: 10px; /* Reduce padding */
+    }
+
+    .participantsSection h3, .participantsSection li, .participantsSection ul, .paymentLabel, .inputForm, .labelForm, .userNameForm {
+        font-size: 16px; /* Adjust font sizes for readability */
+    }
+
+    .editButton, .deleteButton, .restoreButton, .saveButton, .cancelButton {
+        padding: 8px 16px; /* Smaller buttons */
+        font-size: 14px; /* Smaller font size for button labels */
+    }
+
+    .buttonContainer {
+     /* Stack buttons vertically */
+        align-items: center; /* Center-align buttons */
+        gap: 5px; /* Reduce space between buttons */
+    }
+
+    .inputForm, .paymentInputForm {
+        max-width: 100%; /* Full width for input forms */
+    }
+}
+
+/* Additional media query for very small screens (less than 480px) */
+@media (max-width: 480px) {
+    .participantsSection h3, .participantsSection li, .paymentLabel {
+        font-size: 13px; /* Further reduce font sizes */
+    }
+
+    .editButton, .deleteButton, .restoreButton, .saveButton, .cancelButton {
+        padding: 6px 12px; /* Even smaller buttons */
+        font-size: 12px; /* Further reduce font size for button labels */
+    }
+
+    .buttonContainer {
+        justify-content: start;
+        gap: 3px; /* Reduce space between buttons further */
+        margin-left: 2.5px;
+    }
+
+    .participantsContainer{
+        margin-top: 3px;
+    }
+
+    .participantsSection, .participantsSection h3{
+        padding: 5px;
+    }
+
+    .formContainer{
+        margin-top: 4px;
+        margin-left: 3px;
+    }
+
+    .inputForm{
+        width: 80%;
+    }
+
+    .userNameForm{
+        font-size: 13px;
+    }
+
+    .labelForm{
+        font-size: 13px;
+    }
+}

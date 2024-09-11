@@ -1,0 +1,63 @@
+/* File: ConfirmModal.module.css */
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(1px); /* This will blur the background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9000;
+}
+
+.modalContent {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.confirmButton, .cancelButton {
+    margin: 10px;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.confirmButton {
+    background-color: red;
+    color: white;
+}
+
+.cancelButton {
+    background-color: gray;
+    color: white;
+}
+
+
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .modalContent {
+        width: 500px; /* Increased width for medium screens */
+    }
+
+    .confirmButton, .cancelButton {
+        padding: 10px 20px; /* Increased padding for larger buttons */
+    }
+}
+
+@media (min-width: 2000px) {
+    .modalContent {
+        width: 800px; /* Further increased width for very large screens */
+        font-size: 25px;
+    }
+
+    .confirmButton, .cancelButton {
+        padding: 30px 40px; /* Further increased padding for larger buttons */
+        font-size: 25px;;
+    }
+}

@@ -1,0 +1,140 @@
+.modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.modalContent {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    width: 90%; /* Adjust as needed */
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds space between elements */
+}
+
+.formInput,
+.formTextArea {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    max-width: 300px;
+    font-size: 20px;
+}
+
+.button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 5px;
+    width: auto;
+    min-width: 120px;
+    max-width: 200px;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+.buttonCancel {
+    background-color: red;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 5px;
+    width: auto;
+    min-width: 120px;
+    max-width: 200px;
+}
+
+.buttonCancel:hover {
+    background-color: #f44336;
+}
+
+.form {
+    margin-top: 10px;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.formLabel {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Media Queries for screens less than 768px wide */
+@media (max-width: 768px) {
+    .modalContent {
+        width: 85%; /* Increase width to use more of the screen */
+        padding: 15px; /* Adjust padding */
+    }
+
+    .formInput, .formTextArea {
+        font-size: 18px; /* Slightly larger font size for easier interaction */
+        padding: 10px; /* Increase padding for better touch targets */
+        margin: 8px 0;
+        max-width: none; /* Allow inputs to fill the modal */
+    }
+
+    .button, .buttonCancel {
+        padding: 12px 15px; /* Increase padding for easier tapping */
+        font-size: 14px; /* Adjust font size */
+        min-width: 100px; /* Adjust button width */
+    }
+
+    .form {
+        padding: 10px; /* Adjust padding inside forms */
+    }
+
+    .formLabel {
+        font-size: 16px; /* Increase label font size for better readability */
+    }
+}
+
+/* Additional media query for very small screens (less than 480px) */
+@media (max-width: 480px) {
+    .modalContent {
+        width: 85%; /* Use nearly full width of the screen */
+        padding: 10px; /* Reduce padding to save space */
+    }
+
+    .formInput, .formTextArea {
+        font-size: 16px; /* Slightly reduce font size to fit smaller screens */
+        padding: 8px; /* Adjust padding */
+        width: 50%;
+    }
+
+    .button, .buttonCancel {
+        padding: 10px 12px; /* Adjust padding */
+        font-size: 12px; /* Reduce font size for buttons */
+        min-width: 90px; /* Slightly reduce minimum button width */
+    }
+
+    .formLabel {
+        font-size: 14px; /* Reduce label font size for consistency */
+    }
+}
