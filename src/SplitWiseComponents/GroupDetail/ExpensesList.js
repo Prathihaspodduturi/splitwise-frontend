@@ -82,8 +82,6 @@ const ExpensesList = ({ groupId, whichExpenses, action, handleAction, setEveryth
     const expensesToShow = whichExpenses ? activeExpenses : deletedExpenses;
 
     return (
-
-
         <div className={styles.expensesSection}>
         <h1>{whichExpenses ? 'active' : 'deleted'} expenses</h1>
         {expensesToShow.length > 0 ? (

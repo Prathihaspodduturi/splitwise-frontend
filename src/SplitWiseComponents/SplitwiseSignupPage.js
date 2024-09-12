@@ -106,12 +106,12 @@ const SplitwiseSignupPage = () => {
                     <input id="username" className={styles.input} type="text" value={username} onChange={e => setUsername(e.target.value)} required />
                 </div>
                 <div className={styles.formGroup}>
-                    <label htmlFor="password" className={styles.label}>Password:</label>
-                    <input id="password" className={styles.input} type="password" value={password} onChange={e => setPassword(e.target.value)} required />
-                </div>
-                <div className={styles.formGroup}>
                     <label htmlFor="email" className={styles.label}>Email:</label>
                     <input id="email" className={styles.input} type="email" value={email} onChange={e => setEmail(e.target.value)} required />
+                </div>
+                <div className={styles.formGroup}>
+                    <label htmlFor="password" className={styles.label}>Password:</label>
+                    <input id="password" className={styles.input} type="password" value={password} onChange={e => setPassword(e.target.value)} required />
                 </div>
                 <button className={styles.button} type="submit">Sign Up</button>
             </form>

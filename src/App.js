@@ -10,6 +10,7 @@ import SplitwiseGroupsPage from './SplitWiseComponents/SplitwiseGroupsPage';
 import SplitwiseGroupDetail from './SplitWiseComponents/GroupDetail/SplitwiseGroupDetail';
 import SplitwiseExpenseDetailPage from './SplitWiseComponents/ExpenseDetail/SplitwiseExpenseDetailPage';
 import SplitwiseCreateGroup from './SplitWiseComponents/SplitwiseCreateGroup';
+import SplitwiseResetPasswordPage from './SplitWiseComponents/SplitwiseResetPasswordPage';
 
 
 const router = createBrowserRouter([
@@ -30,7 +31,8 @@ const router = createBrowserRouter([
         element: <SplitwiseSignupPage/>
       },
       {
-        path: '/prathihas-splitwise/reset-password'
+        path: '/prathihas-splitwise/reset-password',
+        element: <SplitwiseResetPasswordPage/>
       },
       {
         path: '/prathihas-splitwise/logout',
