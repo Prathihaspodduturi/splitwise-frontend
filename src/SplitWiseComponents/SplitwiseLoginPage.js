@@ -69,7 +69,9 @@ const SplitwiseLoginPage  = () => {
       navigate('/prathihas-splitwise/signup');
     }
 
-    const handleForgotPasswordReDirect = () => {}
+    const handleForgotPasswordReDirect = () => {
+      navigate('/prathihas-splitwise/reset-password')
+    }
 
     if (connectionError) {
       return (
