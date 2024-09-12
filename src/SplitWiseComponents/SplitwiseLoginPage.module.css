@@ -111,6 +111,34 @@
 .para{
     font-size: default;
 }
+
+.buttonContainer {
+    display: flex;
+    justify-content: start; /* Align buttons to the start of the container */
+    gap: 10px; /* Space between buttons */
+}
+
+.sendButton,  .cancelButton{
+    padding: 10px 20px;
+    background-color: #28a745; /* Light green background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex-grow: 0;
+}
+
+.sendButton:hover {
+    background-color: #218838; /* Slightly darker green on hover */
+}
+
+.cancelButton {
+    background-color: #6c757d;
+}
+
+.cancelButton:hover {
+    background-color: #5a6268;
+}
 /* Media Queries for Larger Screens */
 
 @media (min-width: 1000px) {
@@ -136,7 +164,7 @@
     }
 
     .para{
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .signUpMessage{
@@ -187,7 +215,7 @@
 /* Styles for screens less than 320px wide (Very small devices) */
 @media (max-width: 400px) {
     .heading, .label, .para, .signUpMessage, .error {
-        font-size: 16px; /* Further reduce text size for very small screens */
+        font-size: 15px; /* Further reduce text size for very small screens */
     }
 
     .button {
