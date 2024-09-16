@@ -68,10 +68,33 @@ const SplitwiseResetPasswordPage = () => {
   const handleOtpSubmit = async (e) => {
     e.preventDefault();
     setError('');
-    // You would handle the OTP submission here, sending the entered OTP to the server for verification
-    console.log('OTP entered:', otp);
-    // Logic for verifying OTP would go here
-  };
+
+    try {
+        const response = await fetch("http://localhost:8080/splitwise/reset-password/verify", {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ "email": usernameOrEmail, "otp": otp })
+        });
+
+        const data = await response.text();
+
+        if (!response.ok) {
+            throw new Error(data);
+        }
+
+        // OTP verified successfully
+        console.log('OTP verified successfully');
+        navigate('/prathihas-splitwise/new-password');  // Redirect to new password page
+    } catch (error) {
+        console.log(error.message);
+        if (error.name === "TypeError" || error.message === "Failed to fetch") {
+            setConnectionError("Unable to connect to the server. Please try again later.");
+        } else {
+            setError(error.message);
+        }
+    }
+};
+
 
   const handleCancel = () => {
     navigate('/prathihas-splitwise/login');
